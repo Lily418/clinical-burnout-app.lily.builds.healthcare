@@ -1,6 +1,7 @@
-import App from './components/app/component.svelte'
+import App from './App.svelte';
 
-const app = new App({
-  target: document.body,
-  data: { name: 'there' }
-})
+var app = new App({
+	target: document.body
+});
+
+export default app;
