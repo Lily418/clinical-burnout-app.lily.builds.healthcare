@@ -1,17 +1,42 @@
 <script>
   import Question from "./Question.svelte";
   export let questions;
-  let questionIndex = 0;
+  $: questionIndex = 0;
   $: question = questions[questionIndex];
 
-  function handleSubmit() {
-    console.log("CLICK");
+  let score;
+
+  function handleSubmit(answers) {
     questionIndex++;
+    score = Object.keys(answers).reduce((acc, k) => acc + answers[k], 0);
   }
 </script>
 
-{#if question}
-  <Question {question} onSubmit={handleSubmit} />
+<style>
+  :root {
+    --progress-height: 50px;
+  }
+
+  .questionCont {
+    height: calc(100vh - var(--progress-height));
+  }
+</style>
+
+{#if questionIndex < 5}
+  <div class="questionCont">
+    <Question
+      {question}
+      onSubmit={handleSubmit}
+      {questionIndex}
+      questionCount={5} />
+  </div>
 {:else}
-  <p>Complete</p>
+  <p>Your score is {score}</p>
+
+  <p>
+    {#if score > 5}
+      A score of over 5 indicates a high stress level. Here are some resources
+      to look at.
+    {:else}This score is an indiciator and here are some resources{/if}
+  </p>
 {/if}
