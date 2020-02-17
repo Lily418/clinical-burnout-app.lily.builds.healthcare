@@ -32,7 +32,6 @@
   </div>
 {:else}
   <p>Your score is {score}</p>
-
   <p>
     {#if score > 5}
       A score of over 5 indicates a high stress level. Here are some resources
