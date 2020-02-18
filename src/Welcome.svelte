@@ -1,15 +1,16 @@
 <div>
-  <h1 class="display-4">Hello, world!</h1>
+  <h1>Clinical Burnout Questionaire</h1>
   <p class="lead">
-    This is a simple hero unit, a simple jumbotron-style component for calling
-    extra attention to featured content or information.
+    This is a questionaire to measure levels of clinical burnout across NHS
+    trusts
   </p>
   <hr class="my-4" />
   <p>
-    It uses utility classes for typography and spacing to space content out
-    within the larger container.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut quam
+    viverra, convallis elit ut, imperdiet ante. In hac habitasse platea
+    dictumst.
   </p>
   <p class="lead">
-    <button type="submit" class="btn btn-info" on:click>Next</button>
+    <button type="submit" class="btn btn-info" on:click>Start</button>
   </p>
 </div>

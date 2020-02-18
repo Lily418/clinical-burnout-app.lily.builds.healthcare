@@ -44,7 +44,7 @@
   }
 </style>
 
-<h2>To Begin Select Your Trust</h2>
+<h2>First, What NHS Trust Do You Work For?</h2>
 <div class="row">
   <div class="col">
     <div id="autocomplete" class="autocomplete" bind:this={root}>
